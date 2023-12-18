@@ -1,0 +1,41 @@
+import React, { FC, useState } from "react";
+import { Meta } from "@storybook/react";
+import { StoryObj } from "@storybook/react";
+
+import { {{pascalCase name}} }  from "@Components/{{pascalCase name}}";
+import { {{pascalCase name}}Props }  from "@Components/{{pascalCase name}}";
+
+import { figmaLinks } from "./constants";
+
+export interface StoryProps  {
+
+}
+
+type LayoutProps = {{pascalCase name}}Props & StoryProps
+
+type StoryInstanceProps = StoryObj<LayoutProps>;
+
+export default {
+	title: "UI kit/{{pascalCase name}}",
+	component: {{pascalCase name}},
+	parameters: {
+		design: {
+			type: "figma",
+			url: figmaLinks.{{camelCase name}},
+		},
+	},
+	args: {
+
+	},
+} as Meta<typeof {{pascalCase name}}>;
+
+export const Default: FC<LayoutProps> = ({ ...args }) => {
+	return (<{{pascalCase name}} {...args} />);
+}
+
+export const AnotherArgs: StoryInstanceProps = {
+	args: {
+
+	},
+	render: props => <Default {...props} />
+};
