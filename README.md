@@ -1,5 +1,11 @@
 # Template Generator
 
+### Download data without git 
+```
+git clone --depth=1 https://github.com/webster6667/plop-frontend-layouts.git ./plop-template
+rm -rf !$/.git
+```
+
 * Component ✅
 * Hook ✅
 * Utils ✅
